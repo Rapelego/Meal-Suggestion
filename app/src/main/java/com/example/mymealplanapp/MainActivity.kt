@@ -16,6 +16,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -36,13 +37,32 @@ class MainActivity : ComponentActivity() {
                     },
                     placeholder = {
                         Text(text = "Time of day")
-                    })
+                    }
+                )
                 Row {
                     Button(onClick = {
-meal_type=when(meal_time)
-                        },
-                    )
+                        meal_type = when(meal_time) {
+                            "Breakfast" -> "1 cup of tea or Black coffee,Oatmeal porridge."
+                            "Snack" ->"Nuts,Cheese."
+                            "Lunch" ->"Toast with vegetables(onions,tomato,lettuce,etc)"
+                            "Dinner" ->"Chicken Salad(chicken breast,grilled,or boiled ,with some fruits or vegetables)"
+                            else -> "invalid meal time"
+                        }
+
+                    }) {
+                        Text(text="Get Meal")
+                    }
+                    Button(onClick = {
+                        meal_time=""
+                        meal_type=""
+                    }) {
+                        Text(text = "Reset")
+                    }
                 }
+
+
+
+
             }
         }
     }
