@@ -19,50 +19,30 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            var username by remember {
+            var meal_time by remember {
                 mutableStateOf("")
             }
-            var password by remember {
+            var meal_type by remember {
                 mutableStateOf("")
             }
 
             Column {
-                Text(text = "Meal App")
+                Text(text = "WELCOME HERA")
 
-
-                OutlinedTextField(value = username,
-                    onValueChange={text->
-                        username = text
-
+                OutlinedTextField(
+                    value = meal_time,
+                    onValueChange = { text ->
+                        meal_time = text
                     },
                     placeholder = {
-
-                            Text(text = "username")
-                    }
-                )
-
-                    OutlinedTextField(value = password,
-                        onValueChange={text->
-                            password = text
-
-                        },
-                        placeholder = {
-                            Text(text= "password")
-                        }
-                    )
-
+                        Text(text = "Time of day")
+                    })
                 Row {
-                    Button(onClick = {/*TODO*/
-                    }) {
-                       Text(text = "Login")
-                    }
-
-                    Button(onClick = {/*TODO*/}) {
-                        Text(text = "Exit")
-                    }
+                    Button(onClick = {
+meal_type=when(meal_time)
+                        },
+                    )
                 }
-
-                Text(text = "Forgot Password")
             }
         }
     }
