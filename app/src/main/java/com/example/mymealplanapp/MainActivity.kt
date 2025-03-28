@@ -38,13 +38,13 @@ class MainActivity : ComponentActivity() {
             ) {
                 Text(
                     text = "WELCOME HERA",
-                    fontWeight = FontWeight.W300,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = 34.sp,
 
 
                     )
 
-                
+
 
                 OutlinedTextField(
                     value = meal_time,
