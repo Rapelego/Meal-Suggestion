@@ -17,6 +17,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
 
@@ -34,7 +36,15 @@ class MainActivity : ComponentActivity() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxSize()
             ) {
-                Text(text = "WELCOME HERA")
+                Text(
+                    text = "WELCOME HERA",
+                    fontWeight = FontWeight.W300,
+                    fontSize = 34.sp,
+
+
+                    )
+
+                
 
                 OutlinedTextField(
                     value = meal_time,
