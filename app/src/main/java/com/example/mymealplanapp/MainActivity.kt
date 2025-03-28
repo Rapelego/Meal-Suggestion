@@ -60,7 +60,8 @@ class MainActivity : ComponentActivity() {
                     }
                 }
 
-
+Text(text = "Meal suggestion for $meal_time is:")
+                Text(text=meal_type)
 
 
             }
