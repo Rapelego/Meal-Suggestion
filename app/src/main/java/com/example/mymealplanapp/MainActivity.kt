@@ -62,11 +62,13 @@ fontFamily = FontFamily.Monospace
                 Row {
                     Button(onClick = {
                         meal_type = when(meal_time) {
-                            "Breakfast" -> "1 cup of tea or Black coffee,Oatmeal porridge."
-                            "Snack" ->"Nuts,Cheese."
-                            "Lunch" ->"Toast with vegetables(onions,tomato,lettuce,etc)"
-                            "Dinner" ->"Chicken Salad(chicken breast,grilled,or boiled ,with some fruits or vegetables)"
-                            else -> "invalid meal time"
+                            "Morning" -> "Breakfast time,have some oatmeal porridge."
+                            "Mid-morning" ->"Snack time, Eat some fruit"
+                            "Afternoon" ->"Lunch time,have a sandwich"
+                            "Mid-afternoon" ->"Have a cake for a quick bite"
+                            "Dinner"->"Your main course,mince and Pasta"
+                            "After-Dinner snack"->"Have Custard "
+                                else -> "invalid meal time"
                         }
 
                     }) {
