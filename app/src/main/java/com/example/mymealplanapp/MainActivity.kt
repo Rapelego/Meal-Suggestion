@@ -7,7 +7,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
@@ -22,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -42,13 +45,13 @@ class MainActivity : ComponentActivity() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(0xFFFFC107))
+                    .background(Color(0x65D09AE0))
             ) {
                 Text(
-                    text = "WELCOME HERA",
-                    fontWeight = FontWeight.SemiBold,
+                    text = "Welcome Hera",
+                    fontWeight = FontWeight.Black,
                     fontSize = 34.sp,
-fontFamily = FontFamily.Monospace
+fontFamily = FontFamily.Serif
 
                     )
 Divider()
@@ -79,8 +82,7 @@ Divider()
                         }
 
                     }) {
-                        Text(text="Get Meal")
-                    }
+                        Text(text="Get Meal")}
                     Button(onClick = {
                         meal_time=""
                         meal_type=""
@@ -91,7 +93,8 @@ Divider()
 
 Text(text = "Meal suggestion for $meal_time is:",
         fontWeight = FontWeight.SemiBold,
-    fontSize = 20.sp,)
+    fontSize = 30.sp,
+    fontFamily = FontFamily.Cursive)
                 Text(text=meal_type)
 
 
