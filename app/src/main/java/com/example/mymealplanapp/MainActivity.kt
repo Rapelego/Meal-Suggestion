@@ -16,6 +16,7 @@ import androidx.compose.material3.Divider
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -58,10 +59,10 @@ Divider()
                 Spacer(modifier = Modifier.size(35.dp))
 
 
-                OutlinedTextField(
+                TextField(
                     value = meal_time,
                     onValueChange = { text ->
-                        meal_time = text
+                         meal_time = text
                     },
                     placeholder = {
                         Text(text = "Time of day",
@@ -70,6 +71,7 @@ Divider()
                             fontFamily = FontFamily.SansSerif)
                     }
                 )
+
                 Spacer(modifier = Modifier.size(40.dp))
 
                 Row {
@@ -86,6 +88,7 @@ Divider()
 
                     }) {
                         Text(text="Get Meal")}
+
                     Button(onClick = {
                         meal_time=""
                         meal_type=""
@@ -95,11 +98,16 @@ Divider()
                 }
 
                 Text(text = "Meal suggestion for $meal_time is:",
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 30.sp,
-                fontFamily = FontFamily.Cursive)
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 25.sp,
+                    fontFamily = FontFamily.Serif,
+                    fontStyle = FontStyle.Italic)
 
-                Text(text=meal_type)
+                Text(text=meal_type,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 15.sp,
+                    fontFamily = FontFamily.Serif,
+                    fontStyle = FontStyle.Italic)
 
 
             }
