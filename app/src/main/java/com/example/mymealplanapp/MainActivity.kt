@@ -94,10 +94,11 @@ Divider()
                     }
                 }
 
-Text(text = "Meal suggestion for $meal_time is:",
-        fontWeight = FontWeight.SemiBold,
-    fontSize = 30.sp,
-    fontFamily = FontFamily.Cursive)
+                Text(text = "Meal suggestion for $meal_time is:",
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 30.sp,
+                fontFamily = FontFamily.Cursive)
+
                 Text(text=meal_type)
 
 
