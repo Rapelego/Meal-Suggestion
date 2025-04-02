@@ -45,14 +45,14 @@ class MainActivity : ComponentActivity() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(0x65D09AE0))
+                    .background(Color(0x65D09AE0)),
             ) {
                 Text(
                     text = "Welcome Hera",
                     fontWeight = FontWeight.Black,
                     fontSize = 34.sp,
-fontFamily = FontFamily.Serif
-
+                    fontFamily = FontFamily.Serif,
+                    fontStyle = FontStyle.Italic
                     )
 Divider()
                 Spacer(modifier = Modifier.size(35.dp))
@@ -64,7 +64,10 @@ Divider()
                         meal_time = text
                     },
                     placeholder = {
-                        Text(text = "Time of day")
+                        Text(text = "Time of day",
+                            fontWeight = FontWeight.Black,
+                            fontSize = 15.sp,
+                            fontFamily = FontFamily.SansSerif)
                     }
                 )
                 Spacer(modifier = Modifier.size(40.dp))
