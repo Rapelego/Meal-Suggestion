@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
                 Text(
                     text = "Welcome Hera",
                     fontWeight = FontWeight.Black,
-                    fontSize = 34.sp,
+                    fontSize = 35.sp,
                     fontFamily = FontFamily.Serif,
                     fontStyle = FontStyle.Italic
                     )
