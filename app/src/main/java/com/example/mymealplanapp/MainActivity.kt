@@ -41,23 +41,23 @@ class MainActivity : ComponentActivity() {
             var meal_type by remember {
                 mutableStateOf("")
             }
-
+//Layout of the App
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .fillMaxSize()
                     .background(Color(0x65D09AE0)),
             ) {
+                //Greetings
                 Text(
-                    text = "Welcome Hera",
+                    text = "Hello Hera",
                     fontWeight = FontWeight.Black,
                     fontSize = 35.sp,
                     fontFamily = FontFamily.Serif,
                     fontStyle = FontStyle.Italic
                     )
-Divider()
+Divider()//divider line
                 Spacer(modifier = Modifier.size(35.dp))
-
 
                 TextField(
                     value = meal_time,
@@ -65,12 +65,12 @@ Divider()
                          meal_time = text
                     },
                     placeholder = {
-                        Text(text = "Time of day",
-                            fontWeight = FontWeight.Black,
+                        Text(text = "Enter time of day",
+                            fontWeight = FontWeight.Thin,
                             fontSize = 15.sp,
                             fontFamily = FontFamily.SansSerif)
                     }
-                )
+                )//Input Field
 
                 Spacer(modifier = Modifier.size(40.dp))
 
@@ -86,14 +86,15 @@ Divider()
                                 else -> "invalid meal time"
                         }
 
-                    }) {
-                        Text(text="Get Meal")}
+                    }) //Meal suggestion button
+
+                    { Text(text="Get Meal")}
 
                     Button(onClick = {
                         meal_time=""
                         meal_type=""
                     }) {
-                        Text(text = "Reset")
+                        Text(text = "Reset")//Clear Button
                     }
                 }
 
@@ -107,7 +108,7 @@ Divider()
                     fontWeight = FontWeight.Black,
                     fontSize = 15.sp,
                     fontFamily = FontFamily.Serif,
-                    fontStyle = FontStyle.Italic)
+                    fontStyle = FontStyle.Italic)//Suggested meal
 
 
             }
