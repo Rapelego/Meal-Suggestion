@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
                     .fillMaxSize()
                     .background(Color(0x65D09AE0)),
             ) {
-                //Greetings
+                //Greeting message
                 Text(
                     text = "Hello Hera",
                     fontWeight = FontWeight.Black,
@@ -70,7 +70,7 @@ Divider()//divider line
                             fontSize = 15.sp,
                             fontFamily = FontFamily.SansSerif)
                     }
-                )//Input Field
+                )//Input Field for time of day
 
                 Spacer(modifier = Modifier.size(40.dp))
 
