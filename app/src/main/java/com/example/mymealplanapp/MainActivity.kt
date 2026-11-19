@@ -27,6 +27,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.GenericFontFamily
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -102,7 +104,7 @@ Divider()//divider line
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 25.sp,
                     fontFamily = FontFamily.Serif,
-                    fontStyle = FontStyle.Italic)
+                    fontStyle = FontStyle.Italic).
 
                 Text(text=meal_type,
                     fontWeight = FontWeight.Black,
@@ -113,6 +115,15 @@ Divider()//divider line
 
             }
         }
+    }
+
+    private fun Unit.Text(
+        text: String,
+        fontWeight: FontWeight,
+        fontSize: TextUnit,
+        fontFamily: GenericFontFamily,
+        fontStyle: FontStyle
+    ) {
     }
 }
 
